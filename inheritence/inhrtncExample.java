@@ -1,4 +1,5 @@
 //Inheritance - Parent-Child Relationship: What it means-> Children get properties/methods from parents.
+//parent class
 class Animal {
 
     String name;
@@ -16,6 +17,7 @@ class Animal {
     }
 }
 
+//child class - inherit the parent class(Animal)
 class Dog extends Animal {
 
     String breed;
@@ -35,17 +37,17 @@ public class inhrtncExample {
     public static void main(String[] args) {
         Animal myAnimal = new Animal("Creature");
         System.out.println("Name: "+myAnimal.name);
-        myAnimal.eat();
-        myAnimal.sleep();
+        myAnimal.eat(); //specific to Animal
+        myAnimal.sleep(); //specific to Animal
        // myAnimal.bark();//// ERROR - Animal doesn't have bark() method
        System.out.println(" ");
 
         Dog myDog = new Dog("Gudu", "street");
-        System.out.println("Name: "+myDog.name);
-        System.out.println("Breed: "+myDog.breed);
-        myDog.bark();
-        myDog.eat();
-        myDog.sleep();
+        System.out.println("Name: "+myDog.name); 
+        System.out.println("Breed: "+myDog.breed); 
+        myDog.bark(); //specific to Dog
+        myDog.eat(); //inherit from Animal
+        myDog.sleep(); //inherit from Animal
 
     }
 }
